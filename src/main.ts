@@ -7,14 +7,14 @@ async function bootstrap() {
     transport: Transport.TCP,
     options: {
       host: '127.0.0.1',
-      port: 8000,
+      port: 4001,
     },
   });
   microservice.listen();
 
   const app = await NestFactory.create(AppModule);
-  await app.listen(8000);
-  console.log('Servidor HTTP corriendo en http://localhost:8000');
+  await app.listen(4000);
+  console.log('Servidor HTTP corriendo en http://localhost:4000');
 }
 bootstrap();
 
