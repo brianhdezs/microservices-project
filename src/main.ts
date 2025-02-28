@@ -13,7 +13,7 @@ async function bootstrap() {
   microservice.listen();
 
   const app = await NestFactory.create(AppModule);
-  await app.listen(4000);
+  await app.listen(4000, '0.0.0.0');
   console.log('Servidor HTTP corriendo en http://localhost:4000');
 }
 bootstrap();
